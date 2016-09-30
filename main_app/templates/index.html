@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="app-html layout-form">
+  <head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+   
+  </head>
+  <body>
+      <table>
+      {% for book in books %}
+      <tr>
+          <th>{{ book.isbn }}</th>
+          <th>{{ book.book_name }}</th>
+          <th>{{ book.price }}</th>
+          <th>{{ book.author }}</th>
+          <th><a href="{% url 'main_app:update/' %}">update</a></th>
+          <th>{{ book.author }}</th>
+      </tr>
+      {% endfor %}
+      </table>
+  </body>
+</html>
